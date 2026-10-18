@@ -64,6 +64,9 @@ ul,ol{list-style:none}
 .btn-line:hover{border-color:var(--ink)}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chips li{font-size:13px;line-height:1;padding:7px 11px;border:1px solid var(--line-2);border-radius:999px;color:var(--ink-2);white-space:nowrap}
+.roles{display:grid;gap:20px;margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+.roles .rh{font-size:13px;font-weight:600;letter-spacing:.01em;color:var(--ink);margin:0 0 10px}
+@media (min-width:900px){.roles{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--cgap,24px)}}
 .tag{display:inline-block;font-size:12px;font-weight:600;line-height:1;padding:5px 9px;border-radius:999px;border:1px solid var(--line-2);color:var(--ink-2);white-space:nowrap}
 
 /* ---------- header ---------- */
@@ -418,8 +421,8 @@ html.lock{overflow:hidden}
     <div class="hero-grid">
       <div class="hero-text">
         <h1 class="name"><span class="l">Mike <span class="y">(Yassine)</span></span><span class="l">Oueslti</span></h1>
-        <p class="role">Video editor, full-stack developer and AI builder.</p>
-        <p class="intro">Freelance from Florida. I make the videos, build the sites and systems behind them, and keep them secure.</p>
+        <p class="role">Senior video editor, software engineer and AI engineer.</p>
+        <p class="intro">Freelance from Florida. I edit and animate video, build full-stack software and agentic AI workflows, and do security research and ethical hacking.</p>
         <div class="cta">
           <a class="btn btn-ink" href="#video">See my work <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5L8 13l4.5-4.5"/></svg></a>
           <a class="btn btn-line" href="mailto:mikestudioagency@gmail.com">Email me</a>
@@ -431,18 +434,25 @@ html.lock{overflow:hidden}
     </div>
 
     <nav class="map" aria-label="What I do">
-      <a class="mcard" href="#video"><span class="t">Video &amp; motion</span><span class="d">Ads, product spots, motion graphics and 3D.</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5L8 13l4.5-4.5"/></svg></a>
-      <a class="mcard" href="#development"><span class="t">Development</span><span class="d">WordPress, React and Node sites and apps.</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5L8 13l4.5-4.5"/></svg></a>
-      <a class="mcard" href="#ai"><span class="t">AI &amp; automation</span><span class="d">Agents and automations that save hours.</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5L8 13l4.5-4.5"/></svg></a>
-      <a class="mcard" href="#security"><span class="t">Security</span><span class="d">Reviews, hardening and incident response.</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5L8 13l4.5-4.5"/></svg></a>
-      <a class="mcard" href="#design"><span class="t">Design</span><span class="d">Invitations, event flyers and social posts.</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5L8 13l4.5-4.5"/></svg></a>
+      <a class="mcard" href="#video"><span class="t">Video, motion &amp; 3D</span><span class="d">Video editing, motion graphics and 3D animation.</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5L8 13l4.5-4.5"/></svg></a>
+      <a class="mcard" href="#development"><span class="t">Software engineering</span><span class="d">Front-end, back-end and full-stack builds.</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5L8 13l4.5-4.5"/></svg></a>
+      <a class="mcard" href="#ai"><span class="t">AI engineering</span><span class="d">Agentic AI workflows and automations.</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5L8 13l4.5-4.5"/></svg></a>
+      <a class="mcard" href="#security"><span class="t">Cybersecurity</span><span class="d">Security research and ethical hacking.</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5L8 13l4.5-4.5"/></svg></a>
+      <a class="mcard" href="#design"><span class="t">Graphic design</span><span class="d">Invitations, event flyers and social posts.</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5L8 13l4.5-4.5"/></svg></a>
     </nav>
+
+    <div class="roles" aria-label="Roles">
+      <div class="rg"><p class="rh">Video &amp; design</p><ul class="chips"><li>Senior video editor</li><li>Motion graphics designer</li><li>3D animator</li><li>Graphic designer &amp; artist</li></ul></div>
+      <div class="rg"><p class="rh">Engineering</p><ul class="chips"><li>Software engineer</li><li>Full-stack developer</li><li>Front-end developer</li><li>Back-end developer</li></ul></div>
+      <div class="rg"><p class="rh">AI</p><ul class="chips"><li>AI engineer</li><li>Agentic AI workflows</li><li>Automation</li></ul></div>
+      <div class="rg"><p class="rh">Security</p><ul class="chips"><li>Cybersecurity researcher</li><li>Ethical hacker</li><li>Security reviews</li></ul></div>
+    </div>
   </section>
 
   <!-- ======= video ======= -->
   <section class="sec wrap" id="video" aria-labelledby="video-h">
     <div class="sec-head">
-      <h2 id="video-h">Video editing, motion graphics &amp; 3D</h2>
+      <h2 id="video-h">Video editing, motion graphics &amp; 3D animation</h2>
       <div class="aside">
         <p class="lede">Ads, product spots and motion design for brands. Open any piece to watch it with sound.</p>
         <ul class="chips" aria-label="Tools"><li>After Effects</li><li>Premiere Pro</li><li>Blender</li><li>Kling</li><li>Veo</li><li>ElevenLabs</li></ul>
@@ -483,9 +493,9 @@ html.lock{overflow:hidden}
   <!-- ======= development ======= -->
   <section class="sec wrap" id="development" aria-labelledby="dev-h">
     <div class="sec-head">
-      <h2 id="dev-h">Full-stack development</h2>
+      <h2 id="dev-h">Software engineering &amp; full-stack development</h2>
       <div class="aside">
-        <p class="lede">WordPress, React and Node sites and apps, databases, servers and deployment.</p>
+        <p class="lede">Front-end and back-end work: WordPress, React and Node sites and apps, databases, servers and deployment.</p>
         <ul class="chips" aria-label="Stack"><li>WordPress</li><li>WooCommerce</li><li>React</li><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>Supabase</li><li>Servers &amp; deployment</li></ul>
       </div>
     </div>
@@ -528,10 +538,10 @@ html.lock{overflow:hidden}
   <!-- ======= AI ======= -->
   <section class="sec wrap" id="ai" aria-labelledby="ai-h">
     <div class="sec-head">
-      <h2 id="ai-h">AI systems &amp; automation</h2>
+      <h2 id="ai-h">AI engineering &amp; agentic workflows</h2>
       <div class="aside">
-        <p class="lede">AI agents and automations that answer leads, move data and save hours.</p>
-        <ul class="chips" aria-label="Tools"><li>n8n</li><li>AI agents</li><li>LLM APIs</li><li>Voice agents</li><li>Playwright</li></ul>
+        <p class="lede">AI agents, agentic workflows and automations that answer leads, move data and save hours.</p>
+        <ul class="chips" aria-label="Tools"><li>n8n</li><li>AI agents</li><li>Agentic workflows</li><li>LLM APIs</li><li>Voice agents</li><li>Playwright</li></ul>
       </div>
     </div>
     <div class="cards three">
@@ -559,17 +569,17 @@ html.lock{overflow:hidden}
   <!-- ======= security ======= -->
   <section class="sec wrap" id="security" aria-labelledby="sec-h">
     <div class="sec-head">
-      <h2 id="sec-h">Cybersecurity</h2>
+      <h2 id="sec-h">Cybersecurity research &amp; ethical hacking</h2>
       <div class="aside">
-        <p class="lede">Security reviews, hardening and incident response for websites, apps and servers.</p>
+        <p class="lede">Security research, ethical hacking, reviews, hardening and incident response for websites, apps and servers.</p>
       </div>
     </div>
     <div class="cards three">
       <article class="card">
         <div class="card-top"><span>Websites and apps</span></div>
-        <h3>Security review</h3>
-        <p>A close read of your code and configuration, plus dependency checks.</p>
-        <div class="card-foot"><span>Code · Configuration · Dependencies</span></div>
+        <h3>Security testing &amp; review</h3>
+        <p>Authorized testing of your site or app to find weak spots before attackers do, plus a close read of the code, configuration and dependencies.</p>
+        <div class="card-foot"><span>Ethical hacking · Code · Dependencies</span></div>
       </article>
       <article class="card">
         <div class="card-top"><span>WordPress and servers</span></div>
@@ -589,7 +599,7 @@ html.lock{overflow:hidden}
   <!-- ======= design ======= -->
   <section class="sec wrap" id="design" aria-labelledby="design-h">
     <div class="sec-head">
-      <h2 id="design-h">Design</h2>
+      <h2 id="design-h">Graphic design &amp; art</h2>
       <div class="aside">
         <p class="lede">Print and social design: invitations, event flyers and a social campaign concept.</p>
         <ul class="chips" aria-label="Tools"><li>Photoshop</li><li>Illustrator</li><li>Figma</li></ul>
