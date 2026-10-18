@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mike (Yassine) Oueslti — Video Editor & Motion Designer</title>
+<meta name="description" content="Video editor and motion designer. Ads, product videos and motion graphics, plus print and social design. Remote from Florida, USA.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mike (Yassine) Oueslti — Video Editor & Motion Designer">
+<meta property="og:description" content="Ads, product videos and motion graphics. Remote from Florida, USA. Available now.">
+<meta property="og:image" content="media/hero-builderlync-storm.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Cpath d='M12 50V14h9l11 20 11-20h9v36h-8V29l-9 16h-6l-9-16v21z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@87.5..112.5,400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;
+  --fg:#fff;
+  --muted:#8f8f8f;
+  --soft:#c9c9c9;
+  --line:#1f1f1f;
+  --line-2:#333;
+  --tile:#0b0b0b;
+  --pad:16px;
+  --hh:56px;
+  --gap:8px;
+  --sec:96px;
+  --ease:cubic-bezier(.2,.7,0,1);
+  color-scheme:dark;
+}
+@media (min-width:760px){:root{--pad:28px;--gap:10px;--hh:60px;--sec:128px}}
+@media (min-width:1100px){:root{--pad:40px;--gap:12px;--hh:64px;--sec:168px}}
+
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--bg);color:var(--fg);-webkit-text-size-adjust:100%;scroll-padding-top:var(--hh)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Archivo",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:16px;line-height:1.5;font-weight:400;font-stretch:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:clip}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:inherit}
+h1,h2,h3,p,dl,dd,figure,ul,ol{margin:0;padding:0}
+ul,ol{list-style:none}
+:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:fixed;left:var(--pad);top:8px;z-index:100;background:var(--fg);color:var(--bg);padding:10px 14px;font-weight:600;transform:translateY(-200%)}
+.skip:focus{transform:none}
+.wrap{padding-left:var(--pad);padding-right:var(--pad);max-width:1760px;margin:0 auto}
+
+/* ---------- header ---------- */
+.site-head{position:sticky;top:0;z-index:40;height:var(--hh);background:var(--bg)}
+.site-head .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.mark{font-weight:700;font-size:15px;letter-spacing:-.01em;white-space:nowrap}
+.mark span{color:var(--muted);font-weight:400}
+.nav{display:flex;gap:18px}
+.nav a{font-size:15px;color:var(--muted);transition:color .2s}
+.nav a:hover,.nav a[aria-current="true"]{color:var(--fg)}
+@media (max-width:420px){.mark span{display:none}.nav{gap:14px}.nav a{font-size:14px}}
+@media (min-width:1100px){.nav{gap:28px}.mark,.nav a{font-size:16px}}
+
+/* ---------- hero ---------- */
+.hero{position:relative}
+.hero-name{padding:20px var(--pad) 18px}
+.hero h1{font-weight:800;font-stretch:100%;font-size:clamp(60px,24vw,124px);line-height:.86;letter-spacing:-.05em;margin-left:-.04em}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 .y{font-weight:400;font-size:.3em;letter-spacing:-.01em;vertical-align:top;margin-left:.25em;display:inline-block;line-height:1;transform:translateY(.32em);color:var(--soft)}
+.hero-sub{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;margin-top:16px;font-size:15px;color:var(--soft)}
+.hero-sub span:last-child{color:var(--muted)}
+
+.wall{display:grid;gap:3px;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;aspect-ratio:27/32;grid-template-areas:"b s1" "b s2"}
+.htile{position:relative;display:block;overflow:hidden;background:var(--tile);min-height:0;transition:opacity .45s var(--ease)}
+.htile:nth-child(1){grid-area:s1}
+.htile:nth-child(2){grid-area:b}
+.htile:nth-child(3){grid-area:s2}
+.htile video,.htile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.htile .cap{position:absolute;left:12px;bottom:10px;right:12px;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;line-height:1.2;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.htile .cap small{display:none}
+.play{flex:none;width:26px;height:26px;border-radius:50%;background:rgba(0,0,0,.55);display:grid;place-items:center}
+.play svg{width:10px;height:10px;margin-left:2px;fill:var(--fg)}
+.htile .cap .t{display:none}
+
+@media (min-width:600px){
+  .wall{margin:0 var(--pad);aspect-ratio:27/16;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr;grid-template-areas:"a b c"}
+  .htile:nth-child(1){grid-area:a}.htile:nth-child(2){grid-area:b}.htile:nth-child(3){grid-area:c}
+  .hero-name{padding-top:28px;padding-bottom:24px}
+}
+@media (min-width:900px) and (min-aspect-ratio:1/1){
+  .hero{height:calc(100svh - var(--hh));min-height:560px;max-height:1200px}
+  .wall{position:absolute;inset:0;margin:0;aspect-ratio:auto;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr;grid-template-areas:"a b c"}
+  .htile:nth-child(1){grid-area:a}.htile:nth-child(2){grid-area:b}.htile:nth-child(3){grid-area:c}
+  .wall::after{content:"";position:absolute;left:0;right:0;bottom:0;height:52%;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.62) 42%,rgba(0,0,0,0) 100%);pointer-events:none}
+  .htile .cap{top:16px;bottom:auto;left:16px;opacity:0;transform:translateY(-4px)}
+  .htile .cap .t{display:inline}
+  .htile .cap small{display:inline;color:var(--soft);font-size:13px;font-weight:400}
+  .htile::before{content:"";position:absolute;left:0;right:0;top:0;height:120px;z-index:1;background:linear-gradient(to bottom,rgba(0,0,0,.7),rgba(0,0,0,0));opacity:0;pointer-events:none}
+  .htile .cap{z-index:2}
+  .htile:hover::before,.htile:focus-visible::before{opacity:1;transition:opacity .3s}
+  .htile:hover .cap,.htile:focus-visible .cap{opacity:1;transform:none;transition:opacity .3s,transform .3s var(--ease)}
+  .htile:focus-visible{outline-offset:-4px}
+  .hero-name{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 var(--pad) 28px;pointer-events:none}
+  .hero h1{font-size:clamp(72px,14.3vw,270px);white-space:nowrap}
+  .hero h1 .ln{display:inline-block;vertical-align:bottom}
+  .hero h1 .ln+.ln{margin-left:.16em}
+  .hero h1 .y{font-size:.22em;margin-left:.3em;transform:translateY(.42em)}
+  .hero-sub{font-size:17px;margin-top:18px}
+}
+@media (hover:hover) and (min-width:900px) and (min-aspect-ratio:1/1){
+  .wall:hover .htile:not(:hover){opacity:.42}
+}
+
+/* name entrance */
+@media (prefers-reduced-motion:no-preference){
+  .js .hero h1 .ln>span{transform:translateY(105%);animation:rise 1s var(--ease) forwards}
+  .js .hero h1 .ln:nth-child(2)>span{animation-delay:.08s}
+  .js .hero-sub{opacity:0;animation:fade .8s .35s ease forwards}
+}
+@keyframes rise{to{transform:none}}
+@keyframes fade{to{opacity:1}}
+
+/* ---------- sections ---------- */
+.sec{padding-top:var(--sec)}
+[tabindex="-1"]:focus{outline:none}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px;margin-bottom:28px}
+.sec-head h2{font-weight:800;font-size:clamp(56px,8vw,128px);line-height:.84;letter-spacing:-.055em;margin-left:-.04em}
+.sec-head p{color:var(--muted);font-size:15px;max-width:40ch;text-wrap:balance}
+@media (min-width:1100px){.sec-head{margin-bottom:40px}.sec-head p{font-size:16px;text-align:right}}
+
+/* ---------- video grid ---------- */
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px var(--gap)}
+.vcard{display:block;width:100%;grid-column:span 1}
+.vcard.h,.vcard.feat{grid-column:span 2}
+.frame{position:relative;display:block;overflow:hidden;background:var(--tile);aspect-ratio:9/16}
+.vcard.h .frame{aspect-ratio:16/9}
+.frame img,.frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.frame video{opacity:0;transition:opacity .35s ease}
+.vcard.is-live .frame video{opacity:1}
+.frame .play{position:absolute;left:10px;bottom:10px;opacity:.95;transition:background .2s}
+.vcard:hover .play,.vcard:focus-visible .play{background:var(--fg)}
+.vcard:hover .play svg,.vcard:focus-visible .play svg{fill:var(--bg)}
+.meta{display:grid;grid-template-columns:1fr auto;grid-template-areas:"t t" "c l";gap:3px 12px;padding-top:12px;font-size:15px;line-height:1.3}
+.meta .t{grid-area:t;font-weight:600;letter-spacing:-.01em}
+.meta .l{grid-area:l;color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums}
+.meta .c{grid-area:c;color:var(--muted);font-size:14px}
+@media (min-width:1100px){.meta{grid-template-areas:"t l" "c c"}.meta .l{font-size:15px}}
+@media (min-width:760px){
+  .vgrid{grid-template-columns:repeat(10,1fr);row-gap:40px}
+  .vcard,.vcard.feat{grid-column:span 2}
+  .vcard.h{grid-column:span 5}
+}
+
+/* ---------- design ---------- */
+.dgroup+.dgroup{margin-top:56px}
+.dlabel{display:flex;align-items:baseline;gap:10px;margin-bottom:16px;padding-top:14px;border-top:1px solid var(--line)}
+.dlabel h3{font-size:20px;font-weight:700;letter-spacing:-.02em}
+.dlabel .n{color:var(--muted);font-size:15px;font-variant-numeric:tabular-nums}
+.dlabel p{color:var(--muted);font-size:14px;line-height:1.4;flex-basis:100%;margin-top:-4px}
+.dlabel{flex-wrap:wrap}
+.tag{display:inline-block;font-size:12px;font-weight:600;line-height:1;padding:5px 7px;border:1px solid var(--line-2);color:var(--soft);vertical-align:middle;margin-left:4px;transform:translateY(-2px)}
+.dgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px var(--gap)}
+.dtile{display:block;width:100%}
+.dtile .img{display:block;aspect-ratio:4/5;overflow:hidden;background:var(--tile)}
+.dtile img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease),opacity .3s}
+.dtile:hover img{transform:scale(1.025)}
+.dtile .cap{display:block;padding-top:10px;font-size:14px;line-height:1.3}
+.dtile .cap b{font-weight:600}
+.dtile .cap span{display:block;color:var(--muted);margin-top:2px}
+.dgrid.odd .dtile:first-child{grid-column:span 2}
+@media (min-width:760px){.dgrid{grid-template-columns:repeat(4,1fr)}.dgrid.odd .dtile:first-child{grid-column:auto}}
+@media (min-width:1100px){
+  .dgroup{display:grid;grid-template-columns:repeat(12,1fr);gap:0 var(--gap);border-top:1px solid var(--line);padding-top:16px}
+  .dgroup+.dgroup{margin-top:72px}
+  .dlabel{grid-column:1/3;flex-direction:column;align-items:flex-start;gap:6px;border:0;padding:0;margin:0;align-self:start;position:sticky;top:calc(var(--hh) + 16px)}
+  .dlabel h3{font-size:24px}
+  .dlabel p{margin-top:2px;max-width:22ch}
+  .dlabel .tag{margin:2px 0 0;transform:none}
+  .dgrid{grid-column:3/-1}
+}
+
+/* ---------- also builds ---------- */
+.builds{display:grid;gap:0;border-top:1px solid var(--line)}
+.build{padding:20px 0;border-bottom:1px solid var(--line);display:grid;gap:6px}
+.build h3{font-size:18px;font-weight:700;letter-spacing:-.015em}
+.build p{color:var(--muted);font-size:15px;line-height:1.45;max-width:46ch}
+.build .k{font-size:13px;color:var(--soft)}
+.builds-title{font-size:clamp(32px,4.4vw,56px)!important}
+@media (min-width:900px){
+  .builds{grid-template-columns:repeat(3,1fr);gap:0 var(--gap);border-top:0}
+  .build{border-top:1px solid var(--line-2);border-bottom:0;padding:18px 24px 0 0;align-content:start}
+}
+
+/* ---------- about ---------- */
+.about{display:grid;gap:56px}
+.statement{font-size:clamp(28px,3.4vw,52px);line-height:1.08;letter-spacing:-.035em;font-weight:600;max-width:18ch}
+.facts{display:grid;grid-template-columns:1fr;gap:0;margin-top:36px;border-top:1px solid var(--line)}
+.facts div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.45}
+.facts dt{color:var(--muted)}
+.facts dd{color:var(--fg)}
+.resume h3{font-size:24px;font-weight:700;letter-spacing:-.02em;margin-bottom:18px}
+.jobs li{display:grid;gap:4px;padding:16px 0;border-top:1px solid var(--line)}
+.jobs .yr{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums}
+.jobs .role{font-weight:600;font-size:17px;letter-spacing:-.01em;line-height:1.3}
+.jobs p{color:var(--muted);font-size:15px;line-height:1.45}
+.dl{display:grid;gap:10px;margin-top:28px}
+.btn{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px;padding:0 18px;border:1px solid var(--line-2);font-size:15px;font-weight:600;transition:background .2s,color .2s,border-color .2s}
+.btn small{font-weight:400;color:var(--muted);font-size:13px;display:flex;align-items:center;gap:8px;transition:color .2s}
+.btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8}
+.btn:hover{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:hover small{color:#555}
+@media (min-width:1100px){
+  .about{grid-template-columns:repeat(12,1fr);gap:0 var(--gap)}
+  .about-l{grid-column:1/7}
+  .resume{grid-column:8/-1}
+  .resume h3{margin-top:6px}
+}
+
+/* ---------- contact ---------- */
+.contact{padding-bottom:40px}
+.contact .eyebrow{font-size:20px;font-weight:700;letter-spacing:-.02em;margin-bottom:18px}
+.email{display:inline-block;font-weight:800;font-size:clamp(30px,calc((100vw - 2 * var(--pad)) / 8.7),164px);line-height:.92;letter-spacing:-.05em;margin-left:-.04em;word-break:normal;overflow-wrap:anywhere;transition:color .2s}
+.email:hover{color:var(--soft)}
+.email .at{display:block}
+.c-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:28px}
+.copy{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;background:var(--fg);color:var(--bg);font-weight:600;font-size:15px;transition:background .2s}
+.copy:hover{background:var(--soft)}
+.copy svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8}
+.c-note{color:var(--muted);font-size:15px}
+
+.foot{margin-top:var(--sec);border-top:1px solid var(--line)}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-top:20px;padding-bottom:28px;font-size:14px;color:var(--muted)}
+.foot a:hover{color:var(--fg)}
+
+/* ---------- lightboxes ---------- */
+dialog.lb{padding:0;margin:0;border:0;background:#000;color:var(--fg);width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;overflow:hidden}
+dialog.lb::backdrop{background:#000}
+dialog.lb[open]{display:block}
+@media (prefers-reduced-motion:no-preference){dialog.lb[open] .lb-in{animation:fade .25s ease}}
+.lb-in{position:relative;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:64px var(--pad) 24px}
+.lb-close{position:absolute;top:12px;right:calc(var(--pad) - 8px);display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 8px;font-size:15px;font-weight:600;z-index:3}
+.lb-close svg{width:18px;height:18px;stroke:currentColor;stroke-width:1.8;fill:none}
+.lb-fig{display:flex;flex-direction:column;align-items:center;max-width:100%}
+#vbox video{background:#000;height:min(calc(100dvh - 150px),calc((100vw - 2 * var(--pad)) * 16 / 9));width:auto;aspect-ratio:9/16;max-width:100%}
+#vbox.is-h video{width:min(calc(100vw - 2 * var(--pad)),1400px,calc((100dvh - 150px) * 16 / 9));height:auto;aspect-ratio:16/9}
+.lb-cap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 20px;width:100%;padding-top:12px;font-size:15px;line-height:1.35}
+.lb-cap b{font-weight:600}
+.lb-cap span{color:var(--muted)}
+#vbox .lb-cap{width:0;min-width:100%}
+.lb-cap .v-line{flex-basis:100%;color:var(--soft);max-width:60ch}
+.lb-bar{width:0!important;min-width:100%}
+#ibox .lb-in{padding-bottom:16px}
+#ibox img{max-height:calc(100dvh - 190px);max-width:calc(100vw - 2 * var(--pad));width:auto;height:auto;object-fit:contain;background:var(--tile)}
+.lb-nav{display:flex;gap:8px;margin-top:4px}
+.arrow{width:48px;height:48px;display:grid;place-items:center;border:1px solid var(--line-2);transition:background .2s,color .2s,border-color .2s}
+.arrow:hover{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.arrow svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8}
+.lb-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding-top:12px}
+.lb-bar .lb-cap{padding:0;width:auto}
+.count{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (min-width:900px){
+  #ibox .lb-in{padding:64px 112px 24px}
+  #ibox img{max-width:calc(100vw - 224px);max-height:calc(100dvh - 150px)}
+  #ibox .lb-nav{position:static;margin:0}
+  #ibox .arrow.prev{position:absolute;left:var(--pad);top:50%;transform:translateY(-50%)}
+  #ibox .arrow.next{position:absolute;right:var(--pad);top:50%;transform:translateY(-50%)}
+}
+html.lock{overflow:hidden}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Mike (Yassine) Oueslti, back to top">Mike <span>(Yassine)</span> Oueslti</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#design">Design</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Intro">
+    <div class="hero-name">
+      <h1><span class="ln"><span>Mike<span class="sr-only"> </span><span class="y">(Yassine)</span></span></span><span class="sr-only"> </span><span class="ln"><span>Oueslti</span></span></h1>
+      <p class="hero-sub"><span>Video editor &amp; motion designer</span><span>Remote from Florida, USA. Available now.</span></p>
+    </div>
+    <div class="wall">
+      <button type="button" class="htile js-video" aria-label="Play 2:00 AM storm, BuilderLync"
+        data-video="media/builderlync-storm.mp4" data-poster="media/builderlync-storm.jpg" data-format="v"
+        data-title="2:00 AM storm" data-client="BuilderLync" data-role="Edit, UI motion" data-len="0:30">
+        <video src="media/hero-builderlync-storm.mp4" poster="media/hero-builderlync-storm.jpg" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true"></video>
+        <span class="cap"><span class="play" aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span><span class="t">2:00 AM storm</span> <small>BuilderLync</small></span>
+      </button>
+      <button type="button" class="htile js-video" aria-label="Play Made to elevate your space, Meavita"
+        data-video="media/meavita-3d-type.mp4" data-poster="media/meavita-3d-type.jpg" data-format="v"
+        data-title="Made to elevate your space" data-client="Meavita" data-role="Edit, motion, 3D tracking" data-len="0:38">
+        <video src="media/hero-meavita-3d-type.mp4" poster="media/hero-meavita-3d-type.jpg" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true"></video>
+        <span class="cap"><span class="play" aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span><span class="t">Made to elevate your space</span> <small>Meavita</small></span>
+      </button>
+      <button type="button" class="htile js-video" aria-label="Play Retro infomercial, BuilderLync"
+        data-video="media/builderlync-infomercial.mp4" data-poster="media/builderlync-infomercial.jpg" data-format="v"
+        data-title="Retro infomercial" data-client="BuilderLync" data-role="Edit, motion, graphics" data-len="0:33">
+        <video src="media/hero-builderlync-infomercial.mp4" poster="media/hero-builderlync-infomercial.jpg" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true"></video>
+        <span class="cap"><span class="play" aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span><span class="t">Retro infomercial</span> <small>BuilderLync</small></span>
+      </button>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="work" aria-labelledby="work-h">
+    <div class="sec-head">
+      <h2 id="work-h">Work</h2>
+      <p>Ads, product spots and motion design. Click any piece to watch it with sound.</p>
+    </div>
+    <div class="vgrid">
+      <button type="button" class="vcard feat js-video" data-video="media/builderlync-storm.mp4" data-poster="media/builderlync-storm.jpg" data-format="v" data-title="2:00 AM storm" data-client="BuilderLync" data-role="Edit, UI motion" data-len="0:30" data-line="A storm hits at 2 AM, the app answers the lead, a proposal gets signed.">
+        <span class="frame"><img src="media/builderlync-storm.jpg" alt="" loading="lazy" width="720" height="1280"><video class="prev" data-src="media/prev-builderlync-storm.mp4" muted loop playsinline preload="none" aria-hidden="true"></video><span class="play" aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span></span>
+        <span class="meta"><span class="t">2:00 AM storm</span><span class="l">0:30</span><span class="c">BuilderLync</span></span>
+      </button>
+      <button type="button" class="vcard js-video" data-video="media/builderlync-infomercial.mp4" data-poster="media/builderlync-infomercial.jpg" data-format="v" data-title="Retro infomercial" data-client="BuilderLync" data-role="Edit, motion, graphics" data-len="0:33" data-line="A late-night “but wait, there’s more” parody that sells real features.">
+        <span class="frame"><img src="media/builderlync-infomercial.jpg" alt="" loading="lazy" width="720" height="1280"><video class="prev" data-src="media/prev-builderlync-infomercial.mp4" muted loop playsinline preload="none" aria-hidden="true"></video><span class="play" aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span></span>
+        <span class="meta"><span class="t">Retro infomercial</span><span class="l">0:33</span><span class="c">BuilderLync</span></span>
+      </button>
+      <button type="button" class="vcard js-video" data-video="media/meavita-3d-type.mp4" data-poster="media/meavita-3d-type.jpg" data-format="v" data-title="Made to elevate your space" data-client="Meavita" data-role="Edit, motion, 3D tracking" data-len="0:38" data-line="Luxury furniture spot with headline type tracked into the room.">
+        <span class="frame"><img src="media/meavita-3d-type.jpg" alt="" loading="lazy" width="720" height="1280"><video class="prev" data-src="media/prev-meavita-3d-type.mp4" muted loop playsinline preload="none" aria-hidden="true"></video><span class="play" aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span></span>
+        <span class="meta"><span class="t">Made to elevate your space</span><span class="l">0:38</span><span class="c">Meavita</span></span>
+      </button>
+      <button type="button" class="vcard js-video" data-video="media/talking-head-social.mp4" data-poster="media/talking-head-social.jpg" data-format="v" data-title="Talking-head social ad" data-client="Creator client" data-role="Edit, captions" data-len="0:25" data-line="Walk-and-talk edit with captions and pop-up graphics.">
+        <span class="frame"><img src="media/talking-head-social.jpg" alt="" loading="lazy" width="720" height="1280"><video class="prev" data-src="media/prev-talking-head-social.mp4" muted loop playsinline preload="none" aria-hidden="true"></video><span class="play" aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span></span>
+        <span class="meta"><span class="t">Talking-head social ad</span><span class="l">0:25</span><span class="c">Creator client</span></span>
+      </button>
+      <button type="button" class="vcard js-video" data-video="media/clever-robots-ui.mp4" data-poster="media/clever-robots-ui.jpg" data-format="v" data-title="Phone UI promo" data-client="CleverRobots" data-role="Motion design" data-len="0:23" data-line="Missed leads pile up, AI agents answer instantly.">
+        <span class="frame"><img src="media/clever-robots-ui.jpg" alt="" loading="lazy" width="720" height="1280"><video class="prev" data-src="media/prev-clever-robots-ui.mp4" muted loop playsinline preload="none" aria-hidden="true"></video><span class="play" aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span></span>
+        <span class="meta"><span class="t">Phone UI promo</span><span class="l">0:23</span><span class="c">CleverRobots</span></span>
+      </button>
+      <button type="button" class="vcard h js-video" data-video="media/nvok-kinetic.mp4" data-poster="media/nvok-kinetic.jpg" data-format="h" data-title="Kinetic type promo" data-client="Nvok.io" data-role="Motion design" data-len="0:36" data-line="Kinetic typography and 3D objects for a tech-education brand.">
+        <span class="frame"><img src="media/nvok-kinetic.jpg" alt="" loading="lazy" width="1280" height="720"><video class="prev" data-src="media/prev-nvok-kinetic.mp4" muted loop playsinline preload="none" aria-hidden="true"></video><span class="play" aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span></span>
+        <span class="meta"><span class="t">Kinetic type promo</span><span class="l">0:36</span><span class="c">Nvok.io</span></span>
+      </button>
+      <button type="button" class="vcard h js-video" data-video="media/website-vsl.mp4" data-poster="media/website-vsl.jpg" data-format="h" data-title="Testimonial VSL" data-client="Coaching program" data-role="Edit, story, graphics" data-len="1:56" data-line="Long-form sales video built from customer testimonials.">
+        <span class="frame"><img src="media/website-vsl.jpg" alt="" loading="lazy" width="1280" height="720"><video class="prev" data-src="media/prev-website-vsl.mp4" muted loop playsinline preload="none" aria-hidden="true"></video><span class="play" aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span></span>
+        <span class="meta"><span class="t">Testimonial VSL</span><span class="l">1:56</span><span class="c">Coaching program</span></span>
+      </button>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="design" aria-labelledby="design-h">
+    <div class="sec-head">
+      <h2 id="design-h">Design</h2>
+      <p>Invitations, event flyers and a social concept.</p>
+    </div>
+
+    <div class="dgroup">
+      <div class="dlabel"><h3>Invitations</h3><span class="n">4</span></div>
+      <div class="dgrid">
+        <button type="button" class="dtile" data-img="design/wedding-mira-elias.jpg"><span class="img"><img src="design/wedding-mira-elias.jpg" alt="Wedding invitation for Mira and Elias: couple portrait framed in gold, script lettering, cream flowers." loading="lazy" width="1122" height="1402"></span><span class="cap"><b>Mira &amp; Elias</b><span>Wedding invitation</span></span></button>
+        <button type="button" class="dtile" data-img="design/wedding-noor-youssef.jpg"><span class="img"><img src="design/wedding-noor-youssef.jpg" alt="Wedding invitation for Noor and Youssef: couple under a floral arch, warm gold serif type." loading="lazy" width="1122" height="1402"></span><span class="cap"><b>Noor &amp; Youssef</b><span>Wedding invitation</span></span></button>
+        <button type="button" class="dtile" data-img="design/birthday-thirty-thriving.jpg"><span class="img"><img src="design/birthday-thirty-thriving.jpg" alt="Thirty and Thriving birthday invitation: woman in a red dress with rose-gold balloons." loading="lazy" width="1122" height="1402"></span><span class="cap"><b>Thirty &amp; Thriving</b><span>30th birthday invitation</span></span></button>
+        <button type="button" class="dtile" data-img="design/birthday-amy-29.jpg"><span class="img"><img src="design/birthday-amy-29.jpg" alt="Amy's 29th birthday invitation: black and white photo layout with a cake." loading="lazy" width="1086" height="1448"></span><span class="cap"><b>Amy’s 29th</b><span>Birthday, photo layout</span></span></button>
+      </div>
+    </div>
+
+    <div class="dgroup">
+      <div class="dlabel"><h3>Events</h3><span class="n">8</span><p>Flyers and two layout sketches.</p></div>
+      <div class="dgrid">
+        <button type="button" class="dtile" data-img="design/event-grand-opening.jpg"><span class="img"><img src="design/event-grand-opening.jpg" alt="Grand opening flyer for a taco and tequila restaurant, bold orange and green type over a decorated dining room." loading="lazy" width="1122" height="1402"></span><span class="cap"><b>Grand opening</b><span>Restaurant flyer</span></span></button>
+        <button type="button" class="dtile" data-img="design/event-midnight-jazz.jpg"><span class="img"><img src="design/event-midnight-jazz.jpg" alt="Midnight Jazz Anniversary flyer: cream paper panel with serif and script type beside a candlelit jazz room." loading="lazy" width="1122" height="1402"></span><span class="cap"><b>Midnight Jazz</b><span>Anniversary evening</span></span></button>
+        <button type="button" class="dtile" data-img="design/event-citrus-brunch.jpg"><span class="img"><img src="design/event-citrus-brunch.jpg" alt="Citrus Bridal Brunch flyer with lemons, soft yellow balloons and an outdoor table." loading="lazy" width="1122" height="1402"></span><span class="cap"><b>Citrus brunch</b><span>Bridal brunch</span></span></button>
+        <button type="button" class="dtile" data-img="design/event-sophia-30.jpg"><span class="img"><img src="design/event-sophia-30.jpg" alt="Sophia's 30th birthday flyer with a sunset terrace and balloon arch." loading="lazy" width="1122" height="1402"></span><span class="cap"><b>Sophia’s 30th</b><span>Sunset birthday</span></span></button>
+        <button type="button" class="dtile" data-img="design/event-amelia-3.jpg"><span class="img"><img src="design/event-amelia-3.jpg" alt="Amelia Turns 3 party flyer in pink with balloons and a dessert table." loading="lazy" width="1122" height="1402"></span><span class="cap"><b>Amelia turns 3</b><span>Kids’ birthday party</span></span></button>
+        <button type="button" class="dtile" data-img="design/event-leadership-summit.jpg"><span class="img"><img src="design/event-leadership-summit.jpg" alt="Leadership summit flyer in navy and white with a stage and silver balloons." loading="lazy" width="1122" height="1402"></span><span class="cap"><b>Leadership summit</b><span>Corporate event</span></span></button>
+        <button type="button" class="dtile" data-img="design/sketch-floorplan.jpg"><span class="img"><img src="design/sketch-floorplan.jpg" alt="Hand-drawn floor plan for a launch celebration, with notes on flow, mood and a color palette." loading="lazy" width="1400" height="1120"></span><span class="cap"><b>Launch floor plan</b><span>Layout sketch</span></span></button>
+        <button type="button" class="dtile" data-img="design/sketch-garden.jpg"><span class="img"><img src="design/sketch-garden.jpg" alt="Watercolor sketch of a garden engagement setup with an arch, notes and color swatches." loading="lazy" width="1400" height="1050"></span><span class="cap"><b>Garden engagement</b><span>Layout sketch</span></span></button>
+      </div>
+    </div>
+
+    <div class="dgroup">
+      <div class="dlabel"><h3>Social concept</h3><span class="tag">Concept</span><p>Self-initiated post series for a fictional agency, Amped Marketing.</p></div>
+      <div class="dgrid odd">
+        <button type="button" class="dtile" data-img="design/amped-creative.jpg"><span class="img"><img src="design/amped-creative.jpg" alt="Amped Marketing concept post: large orange and cream condensed type on torn black paper." loading="lazy" width="1122" height="1402"></span><span class="cap"><b>Amped Marketing</b><span>Brand post</span></span></button>
+        <button type="button" class="dtile" data-img="design/amped-insight.jpg"><span class="img"><img src="design/amped-insight.jpg" alt="Amped Marketing concept post: From Insight to Impact, serif headline with collage elements." loading="lazy" width="1122" height="1402"></span><span class="cap"><b>Insight to impact</b><span>Service post</span></span></button>
+        <button type="button" class="dtile" data-img="design/amped-built.jpg"><span class="img"><img src="design/amped-built.jpg" alt="Amped Marketing concept post: Built for Brands Ready to Grow, cream layout with an orange block." loading="lazy" width="1122" height="1402"></span><span class="cap"><b>Built for brands</b><span>Service post</span></span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="builds" aria-labelledby="builds-h">
+    <div class="sec-head">
+      <h2 id="builds-h" class="builds-title">Also builds</h2>
+      <p>Websites and automations, on the side.</p>
+    </div>
+    <div class="builds">
+      <div class="build">
+        <h3>CRM migration tool</h3>
+        <p>Moves a contractor’s contacts, jobs and files into one app without duplicates. Tested with 5,000 contacts and a forced crash.</p>
+        <span class="k">Construction-software company · private</span>
+      </div>
+      <div class="build">
+        <h3>Local business website</h3>
+        <p>Rebuilt a mobile massage business’s site with a page per service and city.</p>
+        <span class="k">React · on staging</span>
+      </div>
+      <div class="build">
+        <h3>Automations</h3>
+        <p>Lead pipelines and an AI phone-receptionist demo for a real-estate business.</p>
+        <span class="k">n8n · AI agents</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="about" aria-labelledby="about-h">
+    <div class="sec-head">
+      <h2 id="about-h">About</h2>
+    </div>
+    <div class="about">
+      <div class="about-l">
+        <p class="statement">I edit ads, product videos and motion graphics that people actually watch.</p>
+        <dl class="facts">
+          <div><dt>Based</dt><dd>Remote from Florida, USA. US hours.</dd></div>
+          <div><dt>Work</dt><dd>Freelance or contract. Available now.</dd></div>
+          <div><dt>Since</dt><dd>2023. Self-taught.</dd></div>
+          <div><dt>Languages</dt><dd>English (native), Arabic (fluent)</dd></div>
+          <div><dt>Rates</dt><dd>Video &amp; motion from $35/hr<br>Design from $35/hr<br>Websites &amp; automation from $40/hr<br><span style="color:var(--muted)">Fixed-price projects welcome.</span></dd></div>
+        </dl>
+      </div>
+      <div class="resume">
+        <h3>Resume</h3>
+        <ol class="jobs">
+          <li><span class="yr">2023 – now</span><span class="role">Freelance video editor, motion designer &amp; developer</span><p>Video for brands, from short TikTok ads to fully animated 3D sequences. Brand and ad design, plus websites and automations.</p></li>
+          <li><span class="yr">2025 – 2026</span><span class="role">Developer &amp; Content Manager, Autom8ion Lab</span><p>Content strategy and production, including the BuilderLync infomercial. Platform development tasks.</p></li>
+          <li><span class="yr">Tools</span><p style="color:var(--fg)">After Effects, Premiere Pro, Blender, Photoshop, Illustrator, Figma</p><p>Also Kling, Veo, ElevenLabs, Suno, n8n, React, Supabase</p></li>
+          <li><span class="yr">Education</span><p style="color:var(--fg)">High school diploma. Self-taught.</p></li>
+        </ol>
+        <div class="dl">
+          <a class="btn" href="resume/Mike-Yassine-Oueslti-Resume-Video-Motion.pdf" download>Resume — video &amp; design <small>PDF <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v10M3.5 7.5L8 12l4.5-4.5M2 14.5h12"/></svg></small></a>
+          <a class="btn" href="resume/Mike-Yassine-Oueslti-Resume-AI-Automation.pdf" download>Resume — web &amp; automation <small>PDF <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v10M3.5 7.5L8 12l4.5-4.5M2 14.5h12"/></svg></small></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap contact" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h" class="eyebrow">Contact</h2>
+    <a class="email" id="email" href="mailto:mikestudioagency@gmail.com">mikestudioagency<span class="at">@gmail.com</span></a>
+    <div class="c-row">
+      <button type="button" class="copy" id="copy" data-email="mikestudioagency@gmail.com"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="9" height="9"/><path d="M11 5V2H2v9h3"/></svg><span>Copy email</span></button>
+      <p class="c-note">Freelance or contract. Fixed-price projects welcome.</p>
+      <span class="sr-only" id="copy-status" aria-live="polite"></span>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Mike (Yassine) Oueslti</span>
+    <span>Video editor &amp; motion designer</span>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<dialog class="lb" id="vbox" aria-label="Video player">
+  <div class="lb-in">
+    <button type="button" class="lb-close" autofocus>Close <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 3l12 12M15 3L3 15"/></svg></button>
+    <figure class="lb-fig">
+      <video controls playsinline preload="none"></video>
+      <figcaption class="lb-cap"><b class="v-title"></b><span class="v-meta"></span><span class="v-line"></span></figcaption>
+    </figure>
+  </div>
+</dialog>
+
+<dialog class="lb" id="ibox" aria-label="Design viewer">
+  <div class="lb-in">
+    <button type="button" class="lb-close" autofocus>Close <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 3l12 12M15 3L3 15"/></svg></button>
+    <figure class="lb-fig">
+      <img alt="" width="1122" height="1402">
+      <div class="lb-bar">
+        <figcaption class="lb-cap"><b class="i-title"></b><span class="i-meta"></span></figcaption>
+        <div class="lb-nav">
+          <span class="count" aria-live="polite"></span>
+          <button type="button" class="arrow prev" aria-label="Previous design"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M11 3L5 9l6 6"/></svg></button>
+          <button type="button" class="arrow next" aria-label="Next design"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M7 3l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </figure>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var doc = document.documentElement;
+  doc.classList.add('js');
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var mq = function(q){ return window.matchMedia ? window.matchMedia(q) : { matches:false }; };
+  var reduce = mq('(prefers-reduced-motion: reduce)');
+  var canHover = mq('(hover: hover) and (pointer: fine)');
+  var hasIO = 'IntersectionObserver' in window;
+  function play(v){ try { var p = v.play(); if (p && p.catch) p.catch(function(){}); } catch(e){} }
+  function anyOpen(){ return !!document.querySelector('dialog.lb[open]'); }
+
+  /* ---------- hero loops ---------- */
+  var heroVids = $$('.htile video');
+  var heroVisible = true;
+  if (reduce.matches) heroVids.forEach(function(v){ v.removeAttribute('autoplay'); v.pause(); });
+  function heroPlay(){ if (!reduce.matches && heroVisible && !anyOpen()) heroVids.forEach(play); }
+  function heroPause(){ heroVids.forEach(function(v){ v.pause(); }); }
+  if (hasIO && heroVids.length){
+    new IntersectionObserver(function(es){
+      heroVisible = es[0].isIntersecting;
+      heroVisible ? heroPlay() : heroPause();
+    }, { threshold: 0.02 }).observe($('.wall'));
+  }
+
+  /* ---------- card previews ---------- */
+  var cards = $$('.vcard');
+  function prevOf(c){ return c.querySelector('video.prev'); }
+  function startPrev(c){
+    if (reduce.matches || anyOpen()) return;
+    var v = prevOf(c); if (!v) return;
+    if (!v.getAttribute('src') && v.dataset.src) v.src = v.dataset.src;
+    c._want = true;
+    play(v);
+  }
+  function stopPrev(c){
+    var v = prevOf(c); if (!v) return;
+    c._want = false;
+    c.classList.remove('is-live');
+    v.pause();
+  }
+  cards.forEach(function(c){
+    var v = prevOf(c); if (!v) return;
+    v.addEventListener('playing', function(){ if (c._want) c.classList.add('is-live'); else v.pause(); });
+  });
+  if (canHover.matches){
+    cards.forEach(function(c){
+      c.addEventListener('pointerenter', function(){ startPrev(c); });
+      c.addEventListener('pointerleave', function(){ stopPrev(c); });
+      c.addEventListener('focus', function(){ startPrev(c); });
+      c.addEventListener('blur', function(){ stopPrev(c); });
+    });
+  }
+  var io = null;
+  if (!canHover.matches && hasIO){
+    io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ e.isIntersecting ? startPrev(e.target) : stopPrev(e.target); });
+    }, { threshold: 0.6 });
+    cards.forEach(function(c){ io.observe(c); });
+  }
+  function resumePrev(){ if (io){ cards.forEach(function(c){ io.unobserve(c); io.observe(c); }); } }
+  function stopAllPrev(){ cards.forEach(stopPrev); }
+
+  /* ---------- dialogs ---------- */
+  function openDialog(d){
+    d._opener = document.activeElement;
+    doc.classList.add('lock');
+    if (typeof d.showModal === 'function') { try { d.showModal(); } catch(e){ d.setAttribute('open',''); } }
+    else d.setAttribute('open','');
+    var c = d.querySelector('.lb-close'); if (c) c.focus();
+  }
+  function closeDialog(d){
+    if (!d.hasAttribute('open')) return;
+    if (typeof d.close === 'function') d.close(); else { d.removeAttribute('open'); d.dispatchEvent(new Event('close')); }
+  }
+  $$('dialog.lb').forEach(function(d){
+    d.addEventListener('close', function(){
+      doc.classList.remove('lock');
+      var o = d._opener; d._opener = null;
+      if (o && typeof o.focus === 'function') { try { o.focus({ preventScroll: true }); } catch(e){ o.focus(); } }
+    });
+    d.querySelector('.lb-close').addEventListener('click', function(){ closeDialog(d); });
+    d.addEventListener('click', function(e){
+      if (e.target === d || e.target.classList.contains('lb-in')) closeDialog(d);
+    });
+    d.addEventListener('cancel', function(e){ e.preventDefault(); closeDialog(d); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ $$('dialog.lb[open]').forEach(closeDialog); }
+  });
+
+  /* ---------- video lightbox ---------- */
+  var vbox = $('#vbox'), player = $('video', vbox);
+  function openVideo(btn){
+    var d = btn.dataset;
+    stopAllPrev(); heroPause();
+    vbox.classList.toggle('is-h', d.format === 'h');
+    player.pause();
+    player.poster = d.poster || '';
+    player.src = d.video;
+    $('.v-title', vbox).textContent = d.title;
+    $('.v-meta', vbox).textContent = [d.client, d.role, d.len].filter(Boolean).join(' · ');
+    $('.v-line', vbox).textContent = d.line || '';
+    vbox.setAttribute('aria-label', d.title + ', ' + d.client);
+    openDialog(vbox);
+    player.muted = false;
+    play(player);
+  }
+  vbox.addEventListener('close', function(){
+    player.pause();
+    player.removeAttribute('src');
+    try { player.load(); } catch(e){}
+    heroPlay();
+    resumePrev();
+  });
+  $$('.js-video').forEach(function(b){ b.addEventListener('click', function(){ openVideo(b); }); });
+
+  /* ---------- image lightbox ---------- */
+  var ibox = $('#ibox'), big = $('img', ibox), tiles = $$('.dtile'), idx = 0;
+  function show(i){
+    idx = (i + tiles.length) % tiles.length;
+    var t = tiles[idx], im = t.querySelector('img');
+    big.src = t.dataset.img;
+    big.alt = im.alt;
+    big.width = im.width; big.height = im.height;
+    $('.i-title', ibox).textContent = t.querySelector('.cap b').textContent;
+    $('.i-meta', ibox).textContent = t.querySelector('.cap span').textContent;
+    $('.count', ibox).textContent = (idx + 1) + ' / ' + tiles.length;
+    [idx + 1, idx - 1].forEach(function(n){ var p = new Image(); p.src = tiles[(n + tiles.length) % tiles.length].dataset.img; });
+  }
+  tiles.forEach(function(t, i){ t.addEventListener('click', function(){ show(i); openDialog(ibox); }); });
+  $('.prev', ibox).addEventListener('click', function(){ show(idx - 1); });
+  $('.next', ibox).addEventListener('click', function(){ show(idx + 1); });
+  ibox.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowLeft'){ e.preventDefault(); show(idx - 1); }
+    if (e.key === 'ArrowRight'){ e.preventDefault(); show(idx + 1); }
+  });
+  var tx = null;
+  ibox.addEventListener('touchstart', function(e){ tx = e.touches[0].clientX; }, { passive: true });
+  ibox.addEventListener('touchend', function(e){
+    if (tx === null) return;
+    var dx = e.changedTouches[0].clientX - tx; tx = null;
+    if (Math.abs(dx) > 45) show(idx + (dx < 0 ? 1 : -1));
+  });
+
+  /* ---------- copy email ---------- */
+  var copyBtn = $('#copy'), status = $('#copy-status'), label = $('span', copyBtn), timer;
+  function fallbackCopy(text){
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.top = '0'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      return ok;
+    } catch(e){ return false; }
+  }
+  function done(ok){
+    clearTimeout(timer);
+    if (ok){ label.textContent = 'Copied'; status.textContent = 'Email address copied.'; }
+    else {
+      var r = document.createRange(); r.selectNodeContents($('#email'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      label.textContent = 'Selected — press Ctrl+C'; status.textContent = 'Email selected. Press Control C or Command C to copy.';
+    }
+    timer = setTimeout(function(){ label.textContent = 'Copy email'; status.textContent = ''; }, 2400);
+  }
+  copyBtn.addEventListener('click', function(){
+    var text = copyBtn.dataset.email;
+    if (navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(fallbackCopy(text)); });
+    } else done(fallbackCopy(text));
+  });
+
+  /* ---------- smooth anchor nav ---------- */
+  $$('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href').slice(1);
+      var el = id ? document.getElementById(id) : null;
+      if (!el) return;
+      e.preventDefault();
+      if (id === 'top') window.scrollTo({ top: 0, behavior: reduce.matches ? 'auto' : 'smooth' });
+      else el.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
+      if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+      try { el.focus({ preventScroll: true }); } catch(err){}
+      try { history.replaceState(null, '', '#' + id); } catch(err){}
+    });
+  });
+
+  /* ---------- nav state ---------- */
+  var links = $$('.nav a');
+  if (hasIO){
+    var map = {};
+    links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
+    var navIO = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (!e.isIntersecting) return;
+        var id = e.target.id === 'builds' ? 'design' : e.target.id === 'top' ? '' : e.target.id;
+        links.forEach(function(a){ a.removeAttribute('aria-current'); });
+        if (map[id]) map[id].setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['work','design','builds','about','contact'].forEach(function(id){ var el = document.getElementById(id); if (el) navIO.observe(el); });
+    var heroEl = $('.hero'); if (heroEl) { heroEl.id = heroEl.id || 'intro'; }
+    new IntersectionObserver(function(es){ if (es[0].isIntersecting) links.forEach(function(a){ a.removeAttribute('aria-current'); }); }, { rootMargin: '-45% 0px -50% 0px' }).observe($('.hero'));
+  }
+})();
+</script>
+</body>
+</html>
